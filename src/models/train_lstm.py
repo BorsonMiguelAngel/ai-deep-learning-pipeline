@@ -13,7 +13,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from src.data.features import create_sentences
 
 # Configuracion obligatoria para permitir almacenamiento local en MLflow (evita el error de mantenimiento)
-os.environ("MLFLOW_ALLOW_FILE_STORE") = "true"
+os.environ["MLFLOW_ALLOW_FILE_STORE"] == "true"
 
 """
     1.- DEFINICION DE LA ARQUITECTURA DE LA RED LSTM
