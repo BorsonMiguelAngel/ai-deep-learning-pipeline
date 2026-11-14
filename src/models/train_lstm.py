@@ -1,5 +1,6 @@
 import os 
 from pathlib import Path
+import sys
 import mlflow
 import mlflow.pytorch
 import numpy as np
@@ -9,11 +10,17 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 
+# Aqui se arregla la importacion
+# Obtenemos la ruta absoluta de la raiz del proyecto. Subimos dos niveles desde src/models
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
+
 # Importamos nuestra funcion del otro archivo (demostrando la modularidad)
 from src.data.features import create_sentences
 
 # Configuracion obligatoria para permitir almacenamiento local en MLflow (evita el error de mantenimiento)
-os.environ["MLFLOW_ALLOW_FILE_STORE"] == "true"
+os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
 
 """
     1.- DEFINICION DE LA ARQUITECTURA DE LA RED LSTM
