@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/1c0ccba5947743e9b5d9d4d3c37c8286/artifacts
+end_time: 1794619724049
+entry_point_name: ''
+experiment_id: '502916426686805777'
+lifecycle_stage: active
+run_id: 1c0ccba5947743e9b5d9d4d3c37c8286
+run_name: gregarious-robin-707
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794619722839
+status: 4
+tags: []
+user_id: codespace

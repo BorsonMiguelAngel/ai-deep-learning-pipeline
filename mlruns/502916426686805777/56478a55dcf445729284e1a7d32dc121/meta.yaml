@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/56478a55dcf445729284e1a7d32dc121/artifacts
+end_time: 1794620219368
+entry_point_name: ''
+experiment_id: '502916426686805777'
+lifecycle_stage: active
+run_id: 56478a55dcf445729284e1a7d32dc121
+run_name: selective-frog-697
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794620207778
+status: 3
+tags: []
+user_id: codespace

@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/8c8020ed2de6472eb48e07599acf20d3/artifacts
+end_time: 1794619126445
+entry_point_name: ''
+experiment_id: '502916426686805777'
+lifecycle_stage: active
+run_id: 8c8020ed2de6472eb48e07599acf20d3
+run_name: bright-lark-298
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794619125219
+status: 4
+tags: []
+user_id: codespace

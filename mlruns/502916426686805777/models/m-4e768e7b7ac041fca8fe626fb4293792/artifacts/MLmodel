@@ -1,0 +1,23 @@
+artifact_path: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/models/m-4e768e7b7ac041fca8fe626fb4293792/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.14.2
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.15.0+cu132
+mlflow_version: 3.18.0
+model_id: m-4e768e7b7ac041fca8fe626fb4293792
+model_size_bytes: 28761
+model_uuid: m-4e768e7b7ac041fca8fe626fb4293792
+prompts: null
+run_id: 56478a55dcf445729284e1a7d32dc121
+utc_time_created: '2026-11-14 01:36:48.877151'

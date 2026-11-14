@@ -42,7 +42,7 @@ class S500LSTMClassifier(nn.Module):
         # Capa Sigmoide: Restringe la salida entre un valor de 0 a 1 (Para clasificacion binaria: sube o baja) 
         self.sigmoid = nn.Sigmoid()
 
-    def foward(self, x):
+    def forward(self, x):
         # Forma de x: (batch_size, seq_len, input_dim)
         # Forma de recurrent_out: (batch_size, seq_len, hidden_dim)
         # _ (hidden state y cell state) se descartan en este enfoque simple
@@ -162,13 +162,20 @@ def train_lstm_model(
         )
         mlflow.log_metric("test_accuracy", accuracy)
 
-        # 9. Registrar el modelo entrenado de PyTorch en MLflow
-        mlflow.pytorch.log_model(model, artifact_path="lstm_model")
+        # 9. Crear un ejemplo de entrada 
+        # Las versiones recientes de MLflow integran un formato de serialización más avanzado para PyTorch llamado pt2 
+        # (basado en TorchScript/TorchInductor). Este formato exige obligatoriamente un ejemplo de entrada (input_example) 
+        # para poder trazar el grafo de la red neuronal mediante una ejecución virtual.
+
+        # Tomamos una muestra de la forma exacta: (1 batch, window_size, num_features)
+        sample_input = X_test_tensor[0:1] # Extrae la primera secuencia de prueba
+
+        # 10. Registrar el modelo entrenado de PyTorch en MLflow
+        mlflow.pytorch.log_model(model, name="lstm_model", input_example=sample_input, serialization_format="pickle")
         print(
-            "Modelo PyTorch LSTM entrenado y registrado exitosamente en MLflow"
-            " artifacts."
+            "Modelo PyTorch LSTM entrenado y registrado exitosamente en MLflow artifacts."
         )
 
 
-    if __name__ == "__main__":
-        train_lstm_model()
+if __name__ == "__main__":
+    train_lstm_model()

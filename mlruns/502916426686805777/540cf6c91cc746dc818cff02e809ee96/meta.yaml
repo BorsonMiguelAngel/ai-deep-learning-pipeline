@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/540cf6c91cc746dc818cff02e809ee96/artifacts
+end_time: 1794618805546
+entry_point_name: ''
+experiment_id: '502916426686805777'
+lifecycle_stage: active
+run_id: 540cf6c91cc746dc818cff02e809ee96
+run_name: unequaled-rat-702
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794618805019
+status: 4
+tags: []
+user_id: codespace

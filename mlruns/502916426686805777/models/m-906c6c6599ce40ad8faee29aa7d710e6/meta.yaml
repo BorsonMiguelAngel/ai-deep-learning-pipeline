@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777/models/m-906c6c6599ce40ad8faee29aa7d710e6/artifacts
+creation_timestamp: 1794618989660
+experiment_id: '502916426686805777'
+last_updated_timestamp: 1794618989675
+model_id: m-906c6c6599ce40ad8faee29aa7d710e6
+model_type: null
+name: lstm_model
+source_run_id: 1932fd12281e438088ff413a441f5a23
+status: 3
+status_message: null

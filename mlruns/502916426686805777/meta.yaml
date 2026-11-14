@@ -1,0 +1,9 @@
+artifact_location: file:///workspaces/ai-deep-learning-pipeline/mlruns/502916426686805777
+creation_time: 1794618791702
+effective_trace_archival_retention: null
+experiment_id: '502916426686805777'
+last_update_time: 1794618791702
+lifecycle_stage: active
+name: SP500_DeepLearning_LSTM
+trace_location: null
+workspace: default
