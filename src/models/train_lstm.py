@@ -68,8 +68,13 @@ def train_lstm_model(
 ):
     print("---Iniciando pipeline de entrenamiento con Pytorch y LSTM---")
 
-    # 1. Configurar MLflow
-    mlflow.set_tracking_uri(f"file://{Path('mlruns').resolve()}")
+    # Definir la ruta local relativa para MLflow para evitar errores de permisos en servidores CI/CD
+    BASE_DIR = Path(__file__).resolve().parent.parent.parent
+    MLFLOW_DIR = BASE_DIR / "mlruns"
+    MLFLOW_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Configurar el tracking URI de MLflow de forma segura y relativa
+    mlflow.set_tracking_uri(f"file://{MLFLOW_DIR.resolve()}")
     mlflow.set_experiment("SP500_DeepLearning_LSTM")
 
     # 2. Cargar datos procesados
